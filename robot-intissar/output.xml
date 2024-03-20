@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.2 on win32)" generated="20240320 00:22:38.580" rpa="false" schemaversion="4">
+<suite id="s1" name="Automation Exercise" source="c:\Users\KhalilSAADA\Desktop\robot-intissar\test_cases\automation_exercise.robot">
+<test id="s1-t1" name="Automation exercise" line="11">
+<kw name="Launch the automation exercise web app" library="webpage" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://automationexercise.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240320 00:22:38.833" level="INFO">Opening browser 'chrome' to base url 'http://automationexercise.com'.</msg>
+<status status="PASS" starttime="20240320 00:22:38.832" endtime="20240320 00:22:43.055"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240320 00:22:43.055" endtime="20240320 00:22:43.208"/>
+</kw>
+<status status="PASS" starttime="20240320 00:22:38.831" endtime="20240320 00:22:43.209"/>
+</kw>
+<kw name="Given the automation exercise web page is launched" library="homepage">
+<doc>verfies that the homepage is available</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//a[text()=" Home"]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240320 00:22:43.210" endtime="20240320 00:22:43.229"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//a[text()=" Products"]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240320 00:22:43.229" endtime="20240320 00:22:43.243"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//h2[text()="Features Items"]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240320 00:22:43.243" endtime="20240320 00:22:43.257"/>
+</kw>
+<status status="PASS" starttime="20240320 00:22:43.209" endtime="20240320 00:22:43.257"/>
+</kw>
+<kw name="When the user navigate to the Products page" library="products_page">
+<doc>Navigate to page 'Products' and Verify if search bar is visible</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//a[text()=" Products"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240320 00:22:43.262" level="INFO">Clicking element '//a[text()=" Products"]'.</msg>
+<status status="PASS" starttime="20240320 00:22:43.261" endtime="20240320 00:22:47.063"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//input[@name="search"]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240320 00:22:47.064" endtime="20240320 00:22:47.082"/>
+</kw>
+<status status="PASS" starttime="20240320 00:22:43.259" endtime="20240320 00:22:47.082"/>
+</kw>
+<kw name="AND he search for 'men tshirt'" library="products_page">
+<doc>5.write 'men tshirt'  6.Click on 'search button' 7. Verify 'men tshirt' is visible</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=search_product</arg>
+<arg>men tshirt</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240320 00:22:47.086" level="INFO">Typing text 'men tshirt' into text field 'id=search_product'.</msg>
+<status status="PASS" starttime="20240320 00:22:47.084" endtime="20240320 00:22:47.246"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=submit_search</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240320 00:22:47.247" level="INFO">Clicking button 'id=submit_search'.</msg>
+<status status="PASS" starttime="20240320 00:22:47.246" endtime="20240320 00:22:48.779"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//div[@class="productinfo text-center"]//p[text()="Men Tshirt"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240320 00:22:48.779" endtime="20240320 00:22:48.809"/>
+</kw>
+<status status="PASS" starttime="20240320 00:22:47.083" endtime="20240320 00:22:48.810"/>
+</kw>
+<kw name="AND he adds the product to the cart" library="products_page">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//a[text()="Add to cart"])[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240320 00:22:48.813" level="INFO">Clicking element '(//a[text()="Add to cart"])[1]'.</msg>
+<status status="PASS" starttime="20240320 00:22:48.811" endtime="20240320 00:22:48.856"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//button[text()="Continue Shopping"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240320 00:22:48.858" endtime="20240320 00:22:49.124"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[text()="Continue Shopping"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240320 00:22:49.125" level="INFO">Clicking element '//button[text()="Continue Shopping"]'.</msg>
+<status status="PASS" starttime="20240320 00:22:49.125" endtime="20240320 00:22:49.166"/>
+</kw>
+<status status="PASS" starttime="20240320 00:22:48.810" endtime="20240320 00:22:49.166"/>
+</kw>
+<kw name="AND he adds a second item to the cart" library="products_page">
+<doc>the same process for adding a product to the cart ie: search
++ click on search bar +
+verify the product is visible</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=search_product</arg>
+<arg>Blue Top</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240320 00:22:49.169" level="INFO">Typing text 'Blue Top' into text field 'id=search_product'.</msg>
+<status status="PASS" starttime="20240320 00:22:49.168" endtime="20240320 00:22:49.259"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=submit_search</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240320 00:22:49.259" level="INFO">Clicking button 'id=submit_search'.</msg>
+<status status="PASS" starttime="20240320 00:22:49.259" endtime="20240320 00:22:50.526"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//div[@class="productinfo text-center"]//p[text()="Blue Top"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240320 00:22:50.527" endtime="20240320 00:22:50.550"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>(//a[text()="Add to cart"])[1]</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240320 00:22:50.551" endtime="20240320 00:22:50.580"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//a[text()="Add to cart"])[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240320 00:22:50.580" level="INFO">Clicking element '(//a[text()="Add to cart"])[1]'.</msg>
+<status status="PASS" starttime="20240320 00:22:50.580" endtime="20240320 00:22:50.612"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//button[text()="Continue Shopping"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240320 00:22:50.612" endtime="20240320 00:22:50.876"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[text()="Continue Shopping"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240320 00:22:50.877" level="INFO">Clicking element '//button[text()="Continue Shopping"]'.</msg>
+<status status="PASS" starttime="20240320 00:22:50.876" endtime="20240320 00:22:50.959"/>
+</kw>
+<status status="PASS" starttime="20240320 00:22:49.166" endtime="20240320 00:22:50.959"/>
+</kw>
+<kw name="AND he navigates to the cart page" library="cart_page">
+<doc>navigate to the cart page and verifies that the page is actually loaded</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//a[text()=" Cart"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240320 00:22:50.960" level="INFO">Clicking element '//a[text()=" Cart"]'.</msg>
+<status status="PASS" starttime="20240320 00:22:50.960" endtime="20240320 00:22:52.105"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//li[text()="Shopping Cart"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240320 00:22:52.106" endtime="20240320 00:22:52.141"/>
+</kw>
+<status status="PASS" starttime="20240320 00:22:50.959" endtime="20240320 00:22:52.141"/>
+</kw>
+<kw name="THEN the products are well added to the cart" library="cart_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//a[text()="Men Tshirt"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240320 00:22:52.143" endtime="20240320 00:22:52.175"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//a[text()="Blue Top"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240320 00:22:52.175" endtime="20240320 00:22:52.231"/>
+</kw>
+<status status="PASS" starttime="20240320 00:22:52.142" endtime="20240320 00:22:52.231"/>
+</kw>
+<kw name="AND the sum of the products is correct" library="cart_page">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text1}</var>
+<arg>(//p[@class="cart_total_price"])[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240320 00:22:52.259" level="INFO">${text1} = Rs. 400</msg>
+<status status="PASS" starttime="20240320 00:22:52.232" endtime="20240320 00:22:52.259"/>
+</kw>
+<kw name="Split String" library="String">
+<var>${pr_price1}</var>
+<arg>${text1}</arg>
+<arg>${SPACE}</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20240320 00:22:52.260" level="INFO">${pr_price1} = ['Rs.', '400']</msg>
+<status status="PASS" starttime="20240320 00:22:52.260" endtime="20240320 00:22:52.260"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text2}</var>
+<arg>(//p[@class="cart_total_price"])[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240320 00:22:52.278" level="INFO">${text2} = Rs. 500</msg>
+<status status="PASS" starttime="20240320 00:22:52.260" endtime="20240320 00:22:52.278"/>
+</kw>
+<kw name="Split String" library="String">
+<var>${pr_price2}</var>
+<arg>${text1}</arg>
+<arg>${SPACE}</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20240320 00:22:52.279" level="INFO">${pr_price2} = ['Rs.', '400']</msg>
+<status status="PASS" starttime="20240320 00:22:52.278" endtime="20240320 00:22:52.279"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${actual_sum}</var>
+<arg>${pr_price1}[1] + ${pr_price2}[1]</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240320 00:22:52.279" level="INFO">${actual_sum} = 800</msg>
+<status status="PASS" starttime="20240320 00:22:52.279" endtime="20240320 00:22:52.279"/>
+</kw>
+<status status="PASS" starttime="20240320 00:22:52.231" endtime="20240320 00:22:52.280"/>
+</kw>
+<doc>This test case verifies the products added to the cart and ensures their correct summation</doc>
+<status status="PASS" starttime="20240320 00:22:38.831" endtime="20240320 00:22:52.280"/>
+</test>
+<status status="PASS" starttime="20240320 00:22:38.583" endtime="20240320 00:22:52.282"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Automation Exercise">Automation Exercise</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
